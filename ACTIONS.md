@@ -12,7 +12,8 @@
 
 | ID | İş | Makine | Sorumlu | Durum | Son tarih |
 |---|---|---|---|---|---|
-| F-001 | Toy Pile asset kaplama + juice (3D modeller, SFX, partikül) | M4 | Nazım (+A4) | ⏳ | 18 Tem |
+| F-001 | Toy Pile asset kaplama + juice (3D modeller ✅, SFX ✅, partikül ⏳ T-203) | M4 | Nazım (+A4) | ⏳ | 18 Tem |
+| F-001b | Kombo pitch testi (T-204) + şok dalgası/kamera game feel ince ayarı (T-205) | M5 | Nazım | ⬜ | 19 Tem |
 | F-002 | Rakip kreatif analizi (Zen Match, Triple Match 3D, Match Factory!, Tile Busters) | M1/M6 | Analist (+A2) | ⏳ | 19 Tem |
 | F-003 | Test altyapısı: kampanya taslağı (harcamasız) + sonuç panosu iskeleti | M6 | Analist (+A6) | ⬜ | 20 Tem |
 | F-004 | Google Play yeni hesap kısıtı doğrulaması (CTR-proxy fallback kararı) | M6 | Analist | ⬜ | 19 Tem |

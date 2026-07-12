@@ -4,7 +4,7 @@
 > **bu dosyayı güncelleyerek biter** (bkz. CLAUDE.md kapanış ritüeli).
 > Burada yalnız güncel durum yaşar; tarihçe DECISIONS.md ve MEMORY.md'dedir.
 
-**Son güncelleme:** 2026-07-12 · **Güncelleyen:** Claude (framework kurulumu)
+**Son güncelleme:** 2026-07-12 · **Güncelleyen:** Claude (toy-pile framework uyumu)
 
 ---
 
@@ -13,7 +13,7 @@
 - **Faz:** 1 — "İlk Oyun Çıkıyor" (13–22 Temmuz 2026, 10 gün) · plan: [ROADMAP.md](ROADMAP.md)
 - **Aktif oyun:** **Toy Pile** (tap triple-match + shockwave cascade, şasi-lite)
   - Kayıt: [games/toy-pile/](games/toy-pile/) · Unity repo: `game-toy-pile`
-  - Hat durumu: M0 ✅ · M1 ✅ · M2 ✅ (53/70 bilinçli override) · M3 ✅ · **M4 🟡 (asset tedariği)** · M5 ✅ · M6 🔴 · M7 🔴 · M8 🔴
+  - Hat durumu: M0 ✅ · M1 ✅ · M2 ✅ (53/70 bilinçli override) · M3 ✅ · **M4 🟡 (asset tamam, partikül devam — T-203)** · **M5 🟡 (game feel ince ayarı — T-204/T-205)** · M6 🔴 · M7 🔴 · M8 🔴 — detay: `game-toy-pile/docs/00-DEVFLOW.md`
 
 ## Sıradaki insan kapısı
 
@@ -31,6 +31,10 @@ Aktif kuyruk: [ACTIONS.md](ACTIONS.md) · Toy Pile görev detayı: `game-toy-pil
 
 - 2026-07-12: GameFactory framework yapısı kuruldu (bu düzenleme). Eski dosyalar
   taşındı; gerekçeler [archive/README.md](archive/README.md) ve [DECISIONS.md](DECISIONS.md)'de.
+- 2026-07-12: `game-toy-pile` reposu framework standardına hizalandı — doküman
+  numaralandırması, `file:///` link temizliği, `CLAUDE.md`/`AGENTS.md`'ye "Fabrika
+  Bağlantısı" bölümü, `_analiz/`+`_prompt/` kopyalarının temizliği,
+  `AOS_ORCHESTRATOR_SPEC.md`'nin arşive kurtarılması. Detay: [DECISIONS.md](DECISIONS.md).
 - `orchestrator/` kilitli (Faz 3 tetiği bekliyor).
 
 ---

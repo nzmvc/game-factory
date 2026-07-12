@@ -20,6 +20,7 @@
 | 2026-07-11 | Toy Pile yeşil ışık — 53/70 **bilinçli override**, sigortası M6 testi | M2 | Nazım | ✅ Onaylı | [main_analysis](docs/strategy/main_analysis.md) §5 |
 | 2026-07-12 | main_analysis v1.1: 2 kişilik ekip, RACI, AOS↔Fabrika uzlaştırma (5 karar) | Strateji | Nazım | ✅ Onaylı | [main_analysis](docs/strategy/main_analysis.md) §1 |
 | 2026-07-12 | GameFactory framework yapısı kuruldu (ADR-0001…0005) | Repo | Nazım | 🕐 Taslak — onay bekliyor | ADR'ler ↓ |
+| 2026-07-12 | `game-toy-pile` reposu framework standardına hizalandı: doküman path/link düzeltmeleri, `_analiz`/`_prompt` kopyaları silindi, `AOS_ORCHESTRATOR_SPEC.md` arşive taşındı, CLAUDE/AGENTS'a Fabrika Bağlantısı eklendi | Repo hijyen | Claude (uygulama) | ✅ Uygulandı | Bu satır |
 | — | G10 pazarlanabilirlik testi bütçesi ($100–200) | M6 | Nazım | ⬜ Bekliyor (22 Tem) | [ACTIONS.md](ACTIONS.md) F-008 |
 
 ## ADR kayıtları

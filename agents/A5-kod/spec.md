@@ -50,3 +50,11 @@ QA çeklisti (oyun repo docs/13): temiz kurulum + 10 dk oynanış.
 
 ## Faz 2 işi
 Antigravity vs Claude Code A/B → kazanan `uretim.arac` varsayılanı olur (F-105).
+
+## Tasarım senkron sorumluluğu (ADR-0006)
+İşe başlamadan önce oyun reposundaki 04–10 dokümanlarının başlığında 🔴/🟡 rozet
+var mı kontrol et — varsa önce onu netleştir, üstüne kod yazma. Bir T-5xx (Tasarım
+Senkron) görevini bitirince: kodu güncelle → dokümandaki ilgili "Değişiklik
+Geçmişi" satırının Durum'unu 🟢 yap → dosya başlığındaki rozeti 🟢 Senkron'a çek →
+`14-BACKLOG.md`'de görevi kapat. Rozeti yeşile çekmek yalnız buradan, kodun
+gerçekten güncellendiği doğrulandıktan sonra yapılır.

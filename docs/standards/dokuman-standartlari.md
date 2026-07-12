@@ -25,6 +25,12 @@ Bu repo ve tüm oyun repolarının doküman yazım standardı. Denetleyen: A9.
 - Görevler: ⬜ TODO · ⏳ IN_PROGRESS · ✅ DONE
 - Doküman/şema durumu: Taslak · Aktif · Kilitli · Arşiv
 
+## Tasarım-kod senkronu
+Oyun repolarındaki 04–10 dokümanları (kodu tüketen M3/M4 çıktıları) "Kod Senkron
+Durumu" rozeti ve "Değişiklik Geçmişi" tablosu taşır; kodu zaten yazılmış bir
+bölüm değişince bu iz zorunludur, henüz kodlanmamış taslak serbesttir. Detay ve
+gerekçe: [ADR-0006](../decisions/ADR-0006-tasarim-degisim-yonetimi.md).
+
 ## Veri dokümanları
 - Analytics event'leri snake_case ve [schemas/event-schema.md](../../schemas/event-schema.md) standardına tabidir.
 - Şema versiyonu dosya adında (`.v1`); kırıcı değişiklik yeni versiyon açar.

@@ -32,6 +32,7 @@
 | [ADR-0003](docs/decisions/ADR-0003-dogruluk-hiyerarsisi.md) | Docs-as-Code + tek doğruluk kaynağı hiyerarşisi | Taslak |
 | [ADR-0004](docs/decisions/ADR-0004-once-prompt-sonra-sdk.md) | Önce prompt, sonra SDK (orchestrator Faz 3 kilidi) | Taslak |
 | [ADR-0005](docs/decisions/ADR-0005-sablon-tabanli-oyun-dokumantasyonu.md) | Şablon tabanlı oyun dokümantasyonu (templates/game-docs) | Taslak |
+| [ADR-0006](docs/decisions/ADR-0006-tasarim-degisim-yonetimi.md) | Tasarım Değişiklik Kaydı ve Kod Senkron Durumu (04–10 dokümanları) | Taslak |
 
 ## ADR süreci
 

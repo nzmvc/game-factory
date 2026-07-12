@@ -1,6 +1,7 @@
 # <OyunAdı> — Ekran Tasarımı (Portre Layout)
 
 **Son güncelleme:** <YYYY-AA-GG> · **Üreten:** A4 · İlke: okunabilirlik > gerçekçilik; aşırı tasarım yapma — bu hyper-casual.
+**Kod Senkron Durumu:** 🟢 Senkron | 🟡 Kısmi | 🔴 Bekliyor *(ADR-0006)*
 
 ## 1. Genel kurallar
 
@@ -31,3 +32,11 @@
 | 4 | <6–8 SFX> | Ses | | ⬜ |
 
 Tavan ~10–15 kalem; üstü kapsam alarmı.
+
+## 5. Değişiklik Geçmişi
+*Yalnız kodu zaten yazılmış bir bölüm değişince satır ekle (ADR-0006). Kod Etkisi
+"Var" ise `14-BACKLOG.md` → Tasarım Senkron Görevleri'ne T-xxx aç, rozeti 🔴/🟡 yap.*
+
+| Tarih | Değişen bölüm | Özet | Kod Etkisi | Backlog | Durum |
+|---|---|---|---|---|---|
+| | | | | | |

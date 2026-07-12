@@ -1,6 +1,7 @@
 # <OyunAdı> — Skor ve Ekonomi
 
 **Son güncelleme:** <YYYY-AA-GG> · **Üreten:** A3 · Kural: tüm katsayılar GameConfig'te.
+**Kod Senkron Durumu:** 🟢 Senkron | 🟡 Kısmi | 🔴 Bekliyor *(ADR-0006)*
 
 ## 1. Skor
 
@@ -31,3 +32,11 @@ Hedef: oyuncu <X> seviyede bir booster'a yetecek coin biriktirir; rewarded her z
 ## 5. IAP (v1 kapsamına göre)
 
 <remove_ads (non-consumable) · coin_pack_s/m/l (consumable) — şasi-lite'ta stub>
+
+## 6. Değişiklik Geçmişi
+*Yalnız kodu zaten yazılmış bir bölüm değişince satır ekle (ADR-0006). Kod Etkisi
+"Var" ise `14-BACKLOG.md` → Tasarım Senkron Görevleri'ne T-xxx aç, rozeti 🔴/🟡 yap.*
+
+| Tarih | Değişen bölüm | Özet | Kod Etkisi | Backlog | Durum |
+|---|---|---|---|---|---|
+| | | | | | |

@@ -1,6 +1,7 @@
 # <OyunAdı> — GDD
 
 **Son güncelleme:** <YYYY-AA-GG> · **Üreten:** A3 · **Kaynak brief:** `GameFactory/games/<oyun>/brief.md` (completion ≥ 90)
+**Kod Senkron Durumu:** 🟢 Senkron | 🟡 Kısmi | 🔴 Bekliyor *(kod yazılmadan önce boş bırak; ADR-0006)*
 **Tavan: 2–3 sayfa.** Uzuyorsa kapsam alarmı — bu bir hyper-casual GDD'sidir.
 
 ## 1. Tek cümle
@@ -44,3 +45,12 @@ Parametreler: <N obje, T tür, ...> — değerler GameConfig/RemoteConfig'te, bu
 
 ## 10. Kapsam sınırı
 v1'de OLMAYANLAR: <liste — "v2 işi" etiketiyle>. Geliştirme tavanı: ≤ 2 hafta efor.
+
+## 11. Değişiklik Geçmişi
+*Yalnız kodu zaten yazılmış bir bölüm değişince satır ekle (ADR-0006). Kod Etkisi
+"Var" ise `14-BACKLOG.md` → Tasarım Senkron Görevleri'ne T-xxx aç, rozeti 🔴/🟡 yap.
+Rozeti yalnız kodu güncelleyen taraf (A5) 🟢'ye çeker.*
+
+| Tarih | Değişen bölüm | Özet | Kod Etkisi | Backlog | Durum |
+|---|---|---|---|---|---|
+| | | | | | |

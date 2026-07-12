@@ -1,6 +1,7 @@
 # <OyunAdı> — Mekanik Detay Referansı
 
 **Son güncelleme:** <YYYY-AA-GG> · **Üreten:** A3 (A5 uygular) · GDD: [04-GDD.md](04-GDD.md)
+**Kod Senkron Durumu:** 🟢 Senkron | 🟡 Kısmi | 🔴 Bekliyor *(ADR-0006)*
 
 Her etkileşimin teknik parametreleri. Kural: burada yazılan her sayı GameConfig'ten
 okunur; kodda sabit yaşamaz.
@@ -31,3 +32,11 @@ okunur; kodda sabit yaşamaz.
 |---|---|---|
 | <seviye başlar> | — | level_start |
 | <near-miss anı> | <NearMissEvent> | <near_miss> |
+
+## 5. Değişiklik Geçmişi
+*Yalnız kodu zaten yazılmış bir bölüm değişince satır ekle (ADR-0006). Kod Etkisi
+"Var" ise `14-BACKLOG.md` → Tasarım Senkron Görevleri'ne T-xxx aç, rozeti 🔴/🟡 yap.*
+
+| Tarih | Değişen bölüm | Özet | Kod Etkisi | Backlog | Durum |
+|---|---|---|---|---|---|
+| | | | | | |

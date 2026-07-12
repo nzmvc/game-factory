@@ -39,3 +39,12 @@ config'e (RemoteConfig/GameConfig) işaret etmeli, sabit sayı gömülmemeli.
 ## Diğer ajanlarla ilişki
 A1'den brief alır → A4 ve A5'e paralel teslim eder. A5'ten "uygulanamaz" geri
 bildirimi gelirse GDD revize edilir (kapsam büyütmeden).
+
+## Kod zaten yazılmışsa: Değişiklik Kaydı (ADR-0006)
+Kodu zaten uygulanmış bir bölümü (04/05/06/07 dokümanlarında) değiştirirken:
+1. Dosyanın "Değişiklik Geçmişi" tablosuna satır ekle (tarih, değişen bölüm, özet).
+2. Kod Etkisi'ni dürüstçe işaretle: Var/Yok. Var ise `14-BACKLOG.md` → "Tasarım
+   Senkron Görevleri"ne bir T-5xx görevi aç.
+3. Dosya başlığındaki Kod Senkron Durumu rozetini 🔴 (tam etkiliyorsa) veya 🟡
+   (kısmen) yap. **Bu rozeti asla kendin 🟢 yapma** — kodu güncelleyen taraf (A5)
+   yeşile çeker, aksi halde "tasarım bitti ama kod hâlâ eskisi" durumu gizli kalır.

@@ -1,6 +1,7 @@
 # <OyunAdı> — Juice Rehberi
 
 **Son güncelleme:** <YYYY-AA-GG> · **Üreten:** A4 · İlke: **juice üründür** — "satisfying" his süs değil, oyunun kendisi.
+**Kod Senkron Durumu:** 🟢 Senkron | 🟡 Kısmi | 🔴 Bekliyor *(ADR-0006)*
 
 Her etkileşim üçlüsü: **partikül + ses + haptik** (JuicePreset olarak tek varlıkta).
 
@@ -27,3 +28,11 @@ Her etkileşim üçlüsü: **partikül + ses + haptik** (JuicePreset olarak tek 
 2. Her checklist satırı tek tek: "hissettiriyor mu?" — not al.
 3. Düzeltme listesi çıkar → uygula → tekrar test → **scope freeze**.
 Son söz: Nazım (devredilemez).
+
+## 4. Değişiklik Geçmişi
+*Yalnız kodu zaten yazılmış bir bölüm değişince satır ekle (ADR-0006). Kod Etkisi
+"Var" ise `14-BACKLOG.md` → Tasarım Senkron Görevleri'ne T-xxx aç, rozeti 🔴/🟡 yap.*
+
+| Tarih | Değişen bölüm | Özet | Kod Etkisi | Backlog | Durum |
+|---|---|---|---|---|---|
+| | | | | | |

@@ -6,6 +6,7 @@ Durumlar: ⬜ TODO · ⏳ IN_PROGRESS · ✅ DONE · ⛔ BLOKE
 ## Görev ID şeması
 
 `T-<aşama><sıra>` — 1xx: entegrasyon/QA · 2xx: görsel/juice · 3xx: pazarlama · 4xx: veri/karar
+5xx: tasarım senkron görevi (bkz. §E, ADR-0006)
 
 ## A. Entegrasyon ve lokal doğrulama
 
@@ -40,3 +41,13 @@ Durumlar: ⬜ TODO · ⏳ IN_PROGRESS · ✅ DONE · ⛔ BLOKE
 | T-401 | <kampanya metriklerini çek> | M7 | Yüksek | ⬜ |
 | T-402 | <retention/playtime analizi> | M7 | Yüksek | ⬜ |
 | T-403 | <karar paketi (eşik karşılaştırmalı)> | M7 | Yüksek | ⬜ |
+
+## E. Tasarım Senkron Görevleri
+
+Kaynak: bir tasarım dokümanının (04–10) "Değişiklik Geçmişi" tablosunda
+"Kod Etkisi: Var" işaretlenen her satır burada bir göreve dönüşür (ADR-0006).
+Görev kapanınca hem burası hem kaynak dokümanın rozeti/tablo durumu 🟢 yapılır.
+
+| ID | Görev | Kaynak doküman (tarih) | Öncelik | Durum |
+|---|---|---|---|---|
+| T-501 | <örn. şok dalgası gücünü GDD'deki yeni değere göre kalibre et> | <04-GDD.md, YYYY-AA-GG> | Yüksek | ⬜ |

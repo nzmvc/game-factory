@@ -1,6 +1,7 @@
 # <OyunAdı> — Ekran Akışı
 
 **Son güncelleme:** <YYYY-AA-GG> · **Üreten:** A4 · Kural: UI screen-stack; ekranlar durum makinesi event'lerini dinler.
+**Kod Senkron Durumu:** 🟢 Senkron | 🟡 Kısmi | 🔴 Bekliyor *(ADR-0006)*
 
 ## 1. Akış
 
@@ -30,3 +31,11 @@ MainMenu ↔ Settings
 ## 4. Rate-us kuralı
 
 <X başarılı seviye sonrası, oturum başına en fazla 1 kez, native in-app review.>
+
+## 5. Değişiklik Geçmişi
+*Yalnız kodu zaten yazılmış bir bölüm değişince satır ekle (ADR-0006). Kod Etkisi
+"Var" ise `14-BACKLOG.md` → Tasarım Senkron Görevleri'ne T-xxx aç, rozeti 🔴/🟡 yap.*
+
+| Tarih | Değişen bölüm | Özet | Kod Etkisi | Backlog | Durum |
+|---|---|---|---|---|---|
+| | | | | | |

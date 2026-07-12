@@ -19,6 +19,7 @@ Bu repoya katkı veren herkes — insan veya AI ajanı — aynı kurallara tabid
 |---|---|
 | Durum güncellemesi (CONTEXT, ACTIONS, radar, test sonuçları) | Doğrudan commit |
 | Yeni oyun/doküman (şablondan) | Şablonu kopyala, doldur, kayıt defterine ekle |
+| Tasarım dokümanı değişikliği (04–10) — kodu zaten yazılmış bir bölüm | **Değişiklik Geçmişi kaydı + Kod Senkron rozeti** ([ADR-0006](docs/decisions/ADR-0006-tasarim-degisim-yonetimi.md)) |
 | Süreç / mimari / standart değişikliği | **ADR zorunlu** ([DECISIONS.md](DECISIONS.md) süreci) + insan onayı |
 | Eşik / değişmez kural / şema değişikliği | ADR + **yalnız Nazım onayı** |
 | Arşivden içerik geri getirme | ADR + fabrika terminolojisine çeviri |

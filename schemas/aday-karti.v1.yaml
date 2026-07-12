@@ -1,0 +1,24 @@
+# Aday Kartı v1 — Radar (M1) → Seçim Kapısı (M2) teslim formatı
+# Kaynak: agents/A2-radar/tarama-promptlari.md · Skorlama: ops/esikler.md
+# Kural: "kanit" alanı boş veya kaynaksız olan kart geçersizdir.
+#        Emin olunmayan alana "doğrulanamadı" yazılır — asla uydurulmaz.
+
+id: R-YYYY-AA-GG-01            # tarama tarihi + sıra no
+tarih: YYYY-AA-GG
+origin: radar                  # radar | insan (insan fikri de bu formata girer)
+mekanik_adi: ""                # örn. "screw puzzle / vida sökme"
+referans_oyunlar: []           # 1-3 örnek oyun
+kanit: ""                      # chart pozisyonu / reklam yoğunluğu / indirme tahmini + KAYNAK
+kontrol_semasi: ""             # tap / drag / swipe / hold
+icerik_uretimi: ""             # algoritmik / yari-elle / elle (elle = eleme nedeni)
+
+# 1-5 puanlı kriterler (M2 cetveli bunlardan hesaplanır — bkz. ops/esikler.md)
+uc_sn_okunabilirlik: 0
+gelistirme_maliyeti: 0         # 5 = çok ucuz, ≤1 hafta
+juice_potansiyeli: 0
+reklam_izlenebilirlik: 0       # reklamı izlemek keyifli mi?
+
+rekabet_yogunlugu: ""          # düşük / orta / yüksek
+trend_ivmesi: ""               # yükseliyor / plato / düşüşte
+twist_fikri: ""                # kanıtlanmış mekaniğe eklenecek 1 fark
+notlar: ""

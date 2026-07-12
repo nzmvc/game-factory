@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "gamebrief.v1.json",
+  "title": "GameBrief v1",
+  "description": "Ortak veri sözleşmesi: radar aday kartı + tasarım çekirdeği + completion score. DURUM: TASLAK — Faz 2'de kilitlenir (ACTIONS.md F-103). Kaynak: docs/strategy/main_analysis.md §1.3",
+  "type": "object",
+  "required": ["schema_version", "brief_id", "origin", "mekanik", "skorlar", "tasarim_cekirdegi", "uretim", "completion", "onaylar"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "brief_id": {
+      "type": "string",
+      "pattern": "^GB-\\d{4}-\\d{2}-\\d{2}-\\d{3}$",
+      "description": "Örn. GB-2026-07-15-001"
+    },
+    "origin": {
+      "enum": ["radar", "insan"],
+      "description": "İnsan fikri de aynı cetvelden geçer; yan kapı yok."
+    },
+    "radar_card_id": {
+      "type": ["string", "null"],
+      "description": "origin=radar ise zorunlu; aday kartı id'si (örn. R-2026-07-11-01)"
+    },
+    "mekanik": {
+      "type": "object",
+      "required": ["adi", "referans_oyunlar", "kanit", "kontrol_semasi", "icerik_uretimi", "twist"],
+      "properties": {
+        "adi": { "type": "string" },
+        "referans_oyunlar": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "kanit": { "type": "string", "description": "Chart pozisyonu / reklam yoğunluğu / indirme tahmini + kaynak. Kanıtsız brief olmaz." },
+        "kontrol_semasi": { "enum": ["tap", "drag", "swipe", "hold"] },
+        "icerik_uretimi": { "enum": ["algoritmik", "yari-elle"] },
+        "twist": { "type": "string", "description": "Kanıtlanmış mekaniğe eklenen tek fark; reklamın ilk 3 saniyesinde görünür olmalı." }
+      }
+    },
+    "skorlar": {
+      "type": "object",
+      "required": ["cetvel_70", "yesil_isik"],
+      "properties": {
+        "cetvel_70": { "type": "integer", "minimum": 0, "maximum": 70 },
+        "yesil_isik": { "type": "boolean" },
+        "override": {
+          "type": ["object", "null"],
+          "description": "Eşik altı yeşil ışık yalnız kayıtlı override ile",
+          "properties": {
+            "gerekce": { "type": "string" },
+            "sigorta": { "type": "string" },
+            "onaylayan": { "type": "string" }
+          },
+          "required": ["gerekce", "sigorta", "onaylayan"]
+        }
+      }
+    },
+    "tasarim_cekirdegi": {
+      "type": "object",
+      "required": ["core_loop", "oturum_hedefi_dk", "zorluk_kurali", "monetizasyon"],
+      "properties": {
+        "core_loop": { "type": "string" },
+        "oturum_hedefi_dk": {
+          "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2,
+          "description": "[min, max] — hedef bant 2–5 dk"
+        },
+        "zorluk_kurali": { "type": "string" },
+        "monetizasyon": {
+          "type": "object",
+          "required": ["rewarded_yerlesimler", "interstitial_kurali"],
+          "properties": {
+            "rewarded_yerlesimler": { "type": "array", "items": { "type": "string" } },
+            "interstitial_kurali": { "type": "string", "default": "RemoteConfig" }
+          }
+        }
+      }
+    },
+    "uretim": {
+      "type": "object",
+      "required": ["tavan_gun", "sasi_modu", "arac"],
+      "properties": {
+        "tavan_gun": { "type": "integer", "maximum": 14, "description": "≤ 2 hafta efor — tavan tartışılmaz" },
+        "sasi_modu": { "enum": ["lite", "full"], "description": "full ancak BÜYÜT kararı sonrası" },
+        "arac": { "enum": ["antigravity", "claude-code"] }
+      }
+    },
+    "completion": {
+      "type": "object",
+      "required": ["zorunlu_alan", "dolu", "score"],
+      "properties": {
+        "zorunlu_alan": { "type": "integer", "minimum": 1 },
+        "dolu": { "type": "integer", "minimum": 0 },
+        "score": { "type": "integer", "minimum": 0, "maximum": 100, "description": "round(100×dolu/zorunlu_alan); ≥90 olmadan M3 çalışmaz" }
+      }
+    },
+    "onaylar": {
+      "type": "object",
+      "required": ["secim", "butce"],
+      "properties": {
+        "secim": { "type": ["string", "null"], "description": "Yeşil ışık onay tarihi (YYYY-AA-GG) veya null" },
+        "butce": { "type": ["string", "null"], "description": "Bütçe onay tarihi veya null — onaysız kampanya başlamaz" }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editör
+.idea/
+.vscode/
+*.swp
+
+# Geçici
+*.tmp
+*.log
+__pycache__/

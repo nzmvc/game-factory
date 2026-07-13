@@ -4,7 +4,7 @@
 > **bu dosyayı güncelleyerek biter** (bkz. CLAUDE.md kapanış ritüeli).
 > Burada yalnız güncel durum yaşar; tarihçe DECISIONS.md ve MEMORY.md'dedir.
 
-**Son güncelleme:** 2026-07-13 · **Güncelleyen:** Claude (tasarım değişim yönetimi + Toy Pile yeniden tasarım başlangıcı)
+**Son güncelleme:** 2026-07-13 · **Güncelleyen:** Claude (A3/A4 ajan incelemesi + Toy Pile tasarım revizyonu uygulaması)
 
 ---
 
@@ -18,25 +18,35 @@
 ## Aktif konu: Toy Pile tasarım revizyonu
 
 Nazım cihazda test etti: "basit ama kullanışsız" bulundu (juice/game-feel bittikten
-SONRA verilen bir değerlendirme — yüzeysel değil). Kök neden analizi 3 somut sorun
-çıkardı, ikisi kodda düzeltildi:
+SONRA verilen bir değerlendirme). İki dalgada düzeltildi:
 
-1. **Bar disiplini yoktu** (✅ düzeltildi) — `DifficultyService`'te typeCount tabanı
-   2→4: T≤3 iken bar (7 slot) matematiksel olarak asla dolamıyordu, near-miss/fail
-   ilk ~15 seviyede imkânsızdı. Beceri/risk hissi yoktu.
-2. **Gerçek 3D modeller düz renge boyanıyordu** (✅ düzeltildi) — dokulu Low-Poly
-   oyuncaklar HSV tint ile "plastik" görünüyordu; artık yalnız fallback primitifler
-   tintleniyor.
-3. **Görsel kimlik hâlâ placeholder** (🟡 kod hazır, wiring bekliyor) — `UITheme.cs` +
-   `UIThemeApplier.cs` yazıldı (sıcak krem/mercan/nane palet); Unity'de asset
-   oluşturma + font import (Fredoka) insan işi (T-503).
-4. **5/10 tip için model eksik** (🔴 insan işi bekliyor) — T-504.
+**Dalga 1 — kök neden (kod tarafı bitti):**
+1. ✅ Bar disiplini yoktu — `DifficultyService` typeCount tabanı 2→4 (T≤3 iken
+   near-miss/fail matematiksel olarak imkânsızdı).
+2. ✅ Gerçek 3D modeller düz renge boyanıyordu — artık yalnız fallback primitifler tintleniyor.
 
-Süreç desteği: [ADR-0006](docs/decisions/ADR-0006-tasarim-degisim-yonetimi.md)
-kuruldu; `game-toy-pile/docs/04-GDD.md`, `05-GAME_MECHANICS.md`, `09-SCREEN_DESIGN.md`
-gerçek Değişiklik Geçmişi kayıtlarıyla güncel. Detaylı görevler:
-`game-toy-pile/docs/14-BACKLOG.md` §E. M6 (pazarlanabilirlik), T-503/504 kapanıp
-Nazım yeni build'i cihazda onaylayana kadar **askıda**.
+**Dalga 2 — A3 (GDD/Mekanik) + A4 (Görsel) ajan incelemesi** (`agents/A3-gdd`,
+`agents/A4-gorsel` personalarıyla, subagent olarak çalıştırıldı) 10 ek bulgu çıkardı,
+8'i kodda uygulandı:
+3. ✅ Coin ekonomisi işlevsizdi (kazanılıp hiç saklanmıyordu) → `CurrencyService.cs`
+   ile kalıcı; Shuffle artık coin ile de açılabiliyor.
+4. ✅ Kombo yalnız ses pitch'iyle tepki veriyordu → partikül ölçeği + haptik escalasyonu eklendi.
+5. ✅ Fail anı tamamen sessizdi → haptik atandı (ses/partikül insan işi, T-506).
+6. ✅ HUD skoru statikti (yalnız Win ekranında count-up) → canlı skor + punch-tween.
+7. ✅ Buton metin kontrastı tanımsızdı (~2:1, WCAG 4.5:1 ister) → `UITheme.buttonTextColor`.
+8. ✅ Streak'te ara kilometre taşı yoktu → 5'in katlarında milestone shake.
+9. 🟡 Tile bar ölçüsü dokümanda kendi kendiyle çelişiyordu (700dp/~360dp ekran) →
+   doküman düzeltildi, gerçek görünüm Play Mode'da doğrulanmalı.
+10. Nefes seviyesi + level 1 süresi hedefleri → yalnız doküman düzeltmesi (kod zaten doğruydu).
+
+**İnsan işi bekleyenler (`game-toy-pile/docs/14-BACKLOG.md` §E):**
+T-503 (UITheme wiring + Fredoka font import) · T-504 (5 model daha ata, typeId 6-10) ·
+T-505 (rewarded rozeti, düşük öncelik) · T-506 (fail sesi seçimi — 50 adsız ses dosyası
+arasından dinleyerek).
+
+Süreç desteği: [ADR-0006](docs/decisions/ADR-0006-tasarim-degisim-yonetimi.md).
+M6 (pazarlanabilirlik), T-503/504/506 kapanıp Nazım yeni build'i cihazda
+onaylayana kadar **askıda**.
 
 ## Sıradaki insan kapısı
 

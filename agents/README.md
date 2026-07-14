@@ -9,7 +9,7 @@ yetki matrisi, doğrulama): [AGENTS.md](../AGENTS.md) · Özet kartlar: [AGENT_R
 
 | Klasör | Makine | İşleten (Faz 1–2) | İçerik |
 |---|---|---|---|
-| [A1-producer/](A1-producer/) | M2→M3 arayüzü | Nazım (Claude Projesi) | spec + Claude Projesi talimatı |
+| [A1-producer/](A1-producer/) | M2→M3 arayüzü | Nazım (Claude Desktop projesi) | spec (talimat → [_dis-araclar/claude-desktop.md](_dis-araclar/claude-desktop.md)) |
 | [A2-radar/](A2-radar/) | M1 | Analist | spec + haftalık/günlük tarama promptları |
 | [A3-gdd/](A3-gdd/) | M3 | Nazım | spec |
 | [A4-gorsel/](A4-gorsel/) | M4 | Nazım | spec |
@@ -21,3 +21,6 @@ yetki matrisi, doğrulama): [AGENTS.md](../AGENTS.md) · Özet kartlar: [AGENT_R
 | A0 orchestrator | — | ⛔ KİLİTLİ | [orchestrator/README.md](../orchestrator/README.md) |
 
 Yeni ajan ekleme prosedürü: [AGENTS.md](../AGENTS.md) §5 · Şablon: [_sablon/spec.md](_sablon/spec.md)
+
+Dış araç talimatları (Manus · ChatGPT · Claude Desktop için yapıştırılmaya hazır
+bloklar): [_dis-araclar/](_dis-araclar/)

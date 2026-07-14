@@ -4,7 +4,7 @@
 > **bu dosyayı güncelleyerek biter** (bkz. CLAUDE.md kapanış ritüeli).
 > Burada yalnız güncel durum yaşar; tarihçe DECISIONS.md ve MEMORY.md'dedir.
 
-**Son güncelleme:** 2026-07-13 · **Güncelleyen:** Claude (A3/A4 ajan incelemesi + Toy Pile tasarım revizyonu uygulaması)
+**Son güncelleme:** 2026-07-14 · **Güncelleyen:** Claude (dış araç talimatları — `agents/_dis-araclar/`; önceki: T-503–506 doğrulaması + T-507 keşfi)
 
 ---
 
@@ -39,14 +39,18 @@ SONRA verilen bir değerlendirme). İki dalgada düzeltildi:
    doküman düzeltildi, gerçek görünüm Play Mode'da doğrulanmalı.
 10. Nefes seviyesi + level 1 süresi hedefleri → yalnız doküman düzeltmesi (kod zaten doğruydu).
 
-**İnsan işi bekleyenler (`game-toy-pile/docs/14-BACKLOG.md` §E):**
-T-503 (UITheme wiring + Fredoka font import) · T-504 (5 model daha ata, typeId 6-10) ·
-T-505 (rewarded rozeti, düşük öncelik) · T-506 (fail sesi seçimi — 50 adsız ses dosyası
-arasından dinleyerek).
+**İnsan işi tamamlandı (`game-toy-pile/docs/14-BACKLOG.md` §E):**
+T-503 (UITheme wiring + Fredoka font import) ✅ · T-504 (5 model daha ata, typeId 6-10) ✅ ·
+T-505 (rewarded rozeti) ✅ · T-506 (fail sesi + partikül) ✅ — 2026-07-14 dosya incelemesiyle
+doğrulandı (Canvas/UIThemeApplier wiring, tilePrefabs 10/10, AdBadge x3, FailPreset dolu).
+
+**Yeni açık madde:** TileBar 7 slotun Play Mode'da göründüğü/kamera FOV'unun doğru olduğu
+henüz doğrulanmadı (`09-SCREEN_DESIGN.md` §5 İNSAN GÖREVİ, backlog karşılığı yoktu → T-507
+açılması gerekiyor).
 
 Süreç desteği: [ADR-0006](docs/decisions/ADR-0006-tasarim-degisim-yonetimi.md).
-M6 (pazarlanabilirlik), T-503/504/506 kapanıp Nazım yeni build'i cihazda
-onaylayana kadar **askıda**.
+M6 (pazarlanabilirlik), T-507 kapanıp Nazım yeni build'i cihazda onaylayana kadar **askıda**
+(bkz. HUMAN_ROLES.md §2.3 — game feel devredilemez).
 
 ## Sıradaki insan kapısı
 
@@ -69,6 +73,9 @@ Aktif kuyruk: [ACTIONS.md](ACTIONS.md) · Toy Pile görev detayı: `game-toy-pil
   Bağlantısı" bölümü, `_analiz/`+`_prompt/` kopyalarının temizliği,
   `AOS_ORCHESTRATOR_SPEC.md`'nin arşive kurtarılması. Detay: [DECISIONS.md](DECISIONS.md).
 - `orchestrator/` kilitli (Faz 3 tetiği bekliyor).
+- 2026-07-14: Dış araç talimatları açıldı — [agents/_dis-araclar/](agents/_dis-araclar/)
+  (Manus · ChatGPT · Claude Desktop); eski `A1-producer/instruction.md` oraya taşındı.
+  Araçlara kurulum insan işi: ACTIONS F-106.
 
 ---
 

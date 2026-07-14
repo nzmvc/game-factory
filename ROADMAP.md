@@ -21,10 +21,11 @@ için önceki fazın "bitti" tanımı sağlanmalıdır.
 1. **M7 kararı (Toy Pile):** analist raporu → Nazım kararı: ÖLDÜR / DÜZELT / BÜYÜT.
    BÜYÜT ise gerçek şasi yatırımı (Firebase, mediation, IAP, consent) + soft launch.
 2. M1 radar rutini analist sahipliğinde oturur (haftalık).
-3. **GameBrief v1 kilitlenir** (schemas/gamebrief.v1.json → durum: Kilitli).
-4. A1 Producer talimatı v2 (AOS öğrenimleri: state + validation + modlar + completion score).
-5. **Prototip #2 hattan geçer** — fabrika iddiasının ispatı ikinci oyundur.
-6. Antigravity vs Claude Code A/B kararı → `uretim.arac` varsayılanı.
+3. **Web-First Prototipleme:** `game-dev` (Babylon.js) hattı M5 için devreye alınır.
+4. **GameBrief v1 kilitlenir** (schemas/gamebrief.v1.json → durum: Kilitli).
+5. A1 Producer talimatı v2 (AOS öğrenimleri: state + validation + modlar + completion score).
+6. **Prototip #2 hattan geçer** — fabrika iddiasının ispatı ikinci oyundur.
+7. Antigravity vs Claude Code A/B kararı → `uretim.arac` varsayılanı.
 
 ## FAZ 3 — "Orkestrasyon" · Eylül+ (takvimle değil, TETİKLE)
 

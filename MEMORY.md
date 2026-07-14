@@ -4,7 +4,7 @@
 > CONTEXT.md "şu an"ı, DECISIONS.md "neye karar verildiğini", bu dosya
 > "**ne öğrenildiğini**" tutar. Öldürülen oyunların ayrıntılı kaydı: [ops/kill-log.md](ops/kill-log.md)
 
-**Son güncelleme:** 2026-07-12
+**Son güncelleme:** 2026-07-14
 
 ---
 
@@ -31,6 +31,10 @@
 |---|---|---|
 | 2026-07-12 | Şasi-lite (Dummy/Console stub) CPI testi için yeterli; gerçek SDK yatırımı ancak BÜYÜT kararından sonra. | Toy Pile M0 kararı |
 | 2026-07-12 | Mutlak `file:///` linkler repo taşınınca kırılıyor; göreli link standardı. | toy-pile docs analizi |
+| 2026-07-14 | Google Fonts arayüzü değişti: "Get individual styles" kalktı; sabit ağırlıklı TTF almak için "Download all" + zip içindeki `static/` klasörü kullanılmalı. | Toy Pile T-503 font import oturumu |
+| 2026-07-14 | TMP Font Asset Creator'da "Custom Characters" seçilince ASCII karakter seti otomatik dışarıda kalıyor; Türkçe (veya başka) özel karakterler + ASCII birlikte gerekiyorsa ikisi aynı custom listeye elle yazılmalı. | Toy Pile T-503 font import oturumu |
+| 2026-07-14 | İnsan-görevi (T-5xx) yazılırken sahnenin gerçek durumu doğrulanmadan yazılabiliyor — Toy Pile'da Canvas'ın hiç oluşturulmamış olduğu oturum sırasında keşfedildi, doküman "UIThemeApplier zaten var, bağla" varsayıyordu. Kurala dönüştü → şasi Kabul Kriterleri'ne ve QA şablonuna eklendi (bkz. `agents/A5-kod/sasi-kurulum-promptlari.md`, `templates/game-docs/13-QA.md`). | Toy Pile T-503 oturumu, 2026-07-14 |
+| 2026-07-14 | Claude (keşif + chat rehberliği) → Antigravity (Editor'de mekanik/otomatikleştirilebilir uygulama) hibrit akışı T-503-506'da uçtan uca çalıştı; F-105 kararına (`uretim.arac` varsayılanı) somut veri noktası. | Toy Pile T-503-506 kapanışı |
 
 ## Pazar / test dersleri
 

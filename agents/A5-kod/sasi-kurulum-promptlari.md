@@ -168,6 +168,19 @@ Chassis.Juice altında:
 5. Tüm UI event'leri EventSchema'ya bağlı.
 ```
 
+> **İnsan işi notu (T-503 dersi, Toy Pile 2026-07-14):** Canvas'ı ve tüm ekranları
+> (HUD/Win/Fail/Settings) bu prompt kurar; ama proje özel bir font (TMP SDF) veya
+> `UIThemeApplier` benzeri bir tema bağlama katmanı kullanıyorsa, font import
+> (`Window > TextMeshPro > Font Asset Creator`) ve tema wiring'i Unity Editor
+> dışında otomatikleştirilemez, insan görevi olarak backlog'a T-5xx ile açılmalı.
+> Google Fonts arayüzünde artık "Get individual styles" yok — "Download all" +
+> zip'teki `static/` klasöründen sabit ağırlıklı TTF alınır. TMP'de "Custom
+> Characters" seçilince ASCII seti otomatik dışarıda kalır; proje dilinin özel
+> karakterleri (ör. Türkçe) + ASCII birlikte gerekiyorsa ikisi aynı custom listeye
+> elle yazılmalı. Bu insan görevini yazarken sahnenin o anki gerçek durumunu
+> (Canvas var mı, boş mu) doğrulamadan "bağla" diye yazma — Toy Pile'da Canvas hiç
+> yokken "wiring gerekiyor" yazılmıştı.
+
 ## Prompt 0.8 — Build Pipeline + QA
 
 ```
@@ -193,5 +206,6 @@ Chassis.Juice altında:
 - [ ] Juice demo sahnesi cihazda "hissettiriyor" (senin onayın)
 - [ ] Yeni mekanik eklemek = yalnızca `_Game` klasörü + level data; şasi koduna dokunulmuyor
 - [ ] Gerçek Android cihazda temiz kurulumdan 10 dk sorunsuz oynanış
+- [ ] Canvas sahnede var, tüm ekranlar (HUD/Win/Fail/Settings) onun altında instantiate ediliyor; `UIThemeApplier` (varsa) bağlı ve listeleri dolu — Editor'de Play'siz gözle doğrulanmış (bkz. `templates/game-docs/13-QA.md` §0)
 
 > Mentor notu: 0.1 ve 0.2'de acele etme — şasinin ilk iki adımı fabrikanın temelidir. Sonraki her oyun bu temelin faizini öder.

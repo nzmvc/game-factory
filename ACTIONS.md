@@ -4,7 +4,7 @@
 > (Toy Pile: `game-toy-pile/docs/14-BACKLOG.md`); burada yalnız hat/kapı seviyesi işler tutulur.
 > Durumlar: ⬜ TODO · ⏳ IN_PROGRESS · ✅ DONE · ⛔ BLOKE (insan kapısı bekliyor)
 
-**Son güncelleme:** 2026-07-13
+**Son güncelleme:** 2026-07-14
 
 ---
 
@@ -12,7 +12,7 @@
 
 | ID | İş | Makine | Sorumlu | Durum | Son tarih |
 |---|---|---|---|---|---|
-| F-000 | **Tasarım revizyonu:** kök neden analizi tamam (bar disiplini + görsel kimlik). Kod tarafı: T-501/502 ✅ DONE. İnsan tarafı: T-503 (UITheme wiring + font import), T-504 (5 model daha ata) ⬜ bekliyor — bkz. `game-toy-pile/docs/14-BACKLOG.md` §E | M3 | Nazım (+A3/A5) | ⏳ | — |
+| F-000 | **Tasarım revizyonu:** kök neden analizi tamam (bar disiplini + görsel kimlik). Kod tarafı: T-501/502 ✅ DONE. İnsan tarafı: T-503/504/505/506 ✅ DONE (2026-07-14 doğrulandı) — bkz. `game-toy-pile/docs/14-BACKLOG.md` §E. Yeni açık madde: T-507 (TileBar/kamera FOV Play Mode doğrulaması) ⬜ | M3 | Nazım (+A3/A5) | ⏳ | — |
 | F-001 | Toy Pile asset kaplama + juice (3D modeller ✅, SFX ✅, partikül ⏳ T-203) | M4 | Nazım (+A4) | ⏳ | 18 Tem |
 | F-001b | Kombo pitch testi (T-204) + şok dalgası/kamera game feel ince ayarı (T-205) | M5 | Nazım | ✅ | 19 Tem |
 | F-002 | Rakip kreatif analizi (Zen Match, Triple Match 3D, Match Factory!, Tile Busters) | M1/M6 | Analist (+A2) | ⏳ | 19 Tem |
@@ -32,6 +32,7 @@
 | F-103 | GameBrief v1 şemasının kilitlenmesi (schemas/gamebrief.v1.json) | — | A1 + Nazım | ⬜ |
 | F-104 | İlk tam radar taraması (10 aday kartı) | M1 | Analist (+A2) | ⬜ |
 | F-105 | Antigravity vs Claude Code A/B kararı (`uretim.arac` varsayılanı) | — | Nazım | ⬜ |
+| F-106 | Dış araç kurulumları: Claude Desktop projesi + ChatGPT projesi + ilk Manus görev denemesi (talimatlar: `agents/_dis-araclar/`) | — | Nazım + Analist | ⬜ |
 
 ## Kural
 

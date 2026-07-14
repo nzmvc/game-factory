@@ -4,7 +4,7 @@
 > **bu dosyayı güncelleyerek biter** (bkz. CLAUDE.md kapanış ritüeli).
 > Burada yalnız güncel durum yaşar; tarihçe DECISIONS.md ve MEMORY.md'dedir.
 
-**Son güncelleme:** 2026-07-14 · **Güncelleyen:** Claude (dış araç talimatları — `agents/_dis-araclar/`; önceki: T-503–506 doğrulaması + T-507 keşfi)
+**Son güncelleme:** 2026-07-14 · **Güncelleyen:** Antigravity (Web-First Prototipleme & Hibrit-Casual Monetizasyon entegrasyonu)
 
 ---
 

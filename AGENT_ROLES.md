@@ -1,17 +1,17 @@
 # AGENT_ROLES — Ajan Rol Kartları
 
-**Son güncelleme:** 2026-07-12 · Mimari ve yetkiler: [AGENTS.md](AGENTS.md) · Detaylı spec'ler: [agents/](agents/)
+**Son güncelleme:** 2026-07-14 · Mimari ve yetkiler: [AGENTS.md](AGENTS.md) · Detaylı spec'ler: [agents/](agents/)
 
 Klasik stüdyo rollerinin bu fabrikadaki karşılığı:
 
 | Stüdyo rolü | Bu fabrikada | Not |
 |---|---|---|
 | Product Manager | **A1 Producer** | Fikir olgunlaştırma + seçim kapısı arayüzü |
-| Market Researcher | **A2 Radar** | |
-| Game Designer | **A3 GDD** | |
-| Art Director + UI/UX | **A4 Görsel** | Hyper-casual'da tek rol yeter |
-| Technical Architect + Developer | **A5 Kod** | Şasi mimarisi kilitli; mimari işi dar |
-| Growth / UA | **A6 Test** | |
+| Market Researcher | **A2 Radar** | webpage_extract ile reklam kitaplığı ve TikTok pazar taraması |
+| Game Designer | **A3 GDD** | Hybrid-Casual ekonomi & oynanış tasarımı |
+| Art Director + UI/UX | **A4 Görsel** | Google Stitch promptları ve görsel referans yönetimi |
+| Technical Architect + Developer | **A5 Kod** | Web-First (Babylon.js+React) & Unity Şasi Geliştirme |
+| Growth / UA | **A6 Test** | Web & Mobil pazarlanabilirlik testleri |
 | Data Analyst + karar raportörü | **A7 İnfaz** | Karar insan + eşik tablosunda |
 | Release / ASO | **A8 ASO** | DevOps işleri v1'de A5+A8 içinde |
 | Documentation | **A9 Doküman** | |
@@ -29,28 +29,28 @@ Klasik stüdyo rollerinin bu fabrikadaki karşılığı:
 - Spec: [agents/A1-producer/](agents/A1-producer/)
 
 ## A2 — Radar (pazar araştırması)
-- **Amaç:** Yükselen mekanikleri kanıtla tespit edip aday kartına dönüştürmek.
-- **Makine:** M1 · **Girdi:** top charts, ad library'ler, sektör kaynakları · **Çıktı:** `radar/taramalar/YYYY-Www.md` (10 kart)
+- **Amaç:** Yükselen mekanikleri kanıtla tespit edip aday kartına dönüştürmek. webpage_extract kullanarak ad kütüphanelerini taramak.
+- **Makine:** M1 · **Girdi:** top charts, ad library'ler (TikTok/Meta), sektör kaynakları · **Çıktı:** `radar/taramalar/YYYY-Www.md` (10 kart)
 - **Kural:** Kanıtsız aday yazılmaz; emin olunmayan alana "doğrulanamadı" yazılır.
 - **İşleten:** Analist (haftalık 60–90 dk) · Spec: [agents/A2-radar/](agents/A2-radar/)
 
 ## A3 — GDD (oyun tasarımı)
 - **Amaç:** GameBrief'ten 2–3 sayfalık, üretime hazır GDD çıkarmak.
 - **Makine:** M3 · **Girdi:** brief.md (≥ 90) · **Çıktı:** `games/<oyun>/gdd.md` (şablon: templates/game-docs/04)
-- **Kalite:** Psikoloji spesifikasyonu denetimi zorunlu; kapsam 2 hafta tavanını aşamaz.
+- **Kalite:** Psikoloji spesifikasyonu ve Hybrid-Casual monetizasyon kuralları (IAP, enerji, skins, skip-level, Gacha/kutular) denetimi zorunlu; kapsam 2 hafta tavanını aşamaz.
 - **İnsan onayı:** GDD onayı · Spec: [agents/A3-gdd/](agents/A3-gdd/)
 
 ## A4 — Görsel (art direction + UI/UX)
-- **Amaç:** Stil rehberi, ekran akışı, asset listesi ve juice checklist üretmek; asset üretim promptları yazmak.
-- **Makine:** M4 · **Girdi:** gdd.md · **Çıktı:** stil rehberi + asset listesi + juice checklist (şablonlar: 08/09/10)
-- **Sınır:** Asset üretimi LLM işi değildir (Midjourney/Meshy vb. ayrı araç); A4 prompt ve spec yazar.
+- **Amaç:** Google Stitch promptları, ekran akışı, asset listesi, görsel taslaklar ve juice checklist üretmek.
+- **Makine:** M4 · **Girdi:** gdd.md · **Çıktı:** Stitch promptları, görsel referanslar (`games/<oyun>/gorsel/` HTML veya JPG), asset listesi + juice checklist.
+- **Sınır:** Asset üretimi LLM işi değildir; A4 Google Stitch promptlarını ve şablonlarını hazırlar; Manus entegrasyonu ile `/manus-storage/` üzerinden görsel asset takibini destekler.
 - **İnsan onayı:** Stil onayı · Spec: [agents/A4-gorsel/](agents/A4-gorsel/)
 
 ## A5 — Kod (geliştirme)
-- **Amaç:** Şasi üzerine yalnız mekanik modülünü yazmak; oyun reposunda çalışır.
-- **Makine:** M0 + M5 · **Girdi:** GDD + şasi + prompt seti · **Çıktı:** oynanabilir build (≤ 2 hafta)
-- **Kural:** Şasiye dokunulmaz; her adım cihaz build'iyle uyumlu; EventSchema dışına event yok.
-- **İnsan onayı:** Mimari onay (M0) + cihazda game feel (devredilemez) · Spec: [agents/A5-kod/](agents/A5-kod/)
+- **Amaç:** Önce Babylon.js + React ile 48 saatlik web prototipi yazmak (M5-Web); web testi başarılı olursa Unity şasisi üzerine port etmek (M5-Unity).
+- **Makine:** M0 + M5 (Web/Unity) · **Girdi:** GDD + Stitch prompt / görsel örnekler + şasi · **Çıktı:** Oynanabilir Web Prototip / Unity cihaz build'i.
+- **Kural:** Şasiye dokunulmaz; her adım uyumlu build verir; EventSchema dışına event yok.
+- **İnsan onayı:** Web onay / interaktif chat (M5-Web) + cihazda game feel (M5-Unity) · Spec: [agents/A5-kod/](agents/A5-kod/)
 
 ## A6 — Test (pazarlanabilirlik)
 - **Amaç:** Kreatif brief'leri + kampanya kurulumunu + sonuç panosunu üretmek.

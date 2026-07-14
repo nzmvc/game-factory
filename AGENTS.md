@@ -54,8 +54,8 @@ uymayan çıktı "tamamlandı" sayılmaz.
 | A1 Producer | Tüm repo | games/*/brief.md · DECISIONS.md taslağı · CONTEXT/ACTIONS | Karar vermek; eşik değiştirmek |
 | A2 Radar | ops/esikler.md · schemas/ | radar/taramalar/ | Aday kartına kanıtsız veri yazmak |
 | A3 GDD | brief + strateji + templates | games/*/gdd.md | Kapsamı 2 hafta tavanının üstüne çıkarmak |
-| A4 Görsel | gdd.md | games/*/stil-rehberi.md, asset listesi | Store asset'ine CPI testinden önce efor |
-| A5 Kod | gdd + şablon promptlar | **Oyun reposu** & **Web Prototip** (Babylon.js) | Bu repoda Unity kodu yazmak; şasiyi oyuna göre değiştirmek |
+| A4 Görsel | gdd.md | games/*/stil-rehberi.md, asset listesi, games/*/gorsel/ (Stitch HTML/JPG ve promptlar) | Store asset'ine CPI testinden önce efor |
+| A5 Kod | gdd + şablon promptlar | **Oyun reposu** & **Web Prototip** (Babylon.js + React) | Bu repoda Unity kodu yazmak; şasiyi oyuna göre değiştirmek |
 | A6 Test | gdd + kreatif analiz | games/*/test/ | Kampanyayı bütçe onayı olmadan başlatmak |
 | A7 İnfaz | test verileri + ops/esikler.md | karar raporu · ops/kill-log.md | Eşik yumuşatmak; karar vermek |
 | A8 ASO | oyun + karar raporu | games/*/aso/ | Yayın onayı olmadan store işlemi |

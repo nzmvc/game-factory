@@ -42,9 +42,9 @@ Her makine: **Girdi → Süreç → Çıktı → İnsan kapısı**
 | 1 | Pazar Radarı | Top charts, ad library'ler, AppMagic | Haftalık 10 aday kartı (kanıtlı) | A2 | — |
 | 2 | Seçim Kapısı | Aday kartları | 70'lik cetvelle skorlanmış 1–2 aday | A1 | ✔ **Yeşil ışık** |
 | 3 | GDD | Yeşil ışıklı GameBrief (completion ≥ 90) | 2–3 sayfa tasarım dokümanı | A3 | GDD onayı |
-| 4 | Görsel | GDD | Stil rehberi + asset listesi + juice checklist | A4 | Stil onayı |
-| 5 | Kod | GDD + şasi | Oynanabilir prototip (tek mekanik modülü) | A5 | Cihazda **bizzat oynama** |
-| 6 | Pazarlanabilirlik | Prototip / gameplay videosu | 3–5 kreatif + CPI/CTR verisi | A6 | ✔ **Bütçe onayı** |
+| 4 | Görsel | GDD | Stil rehberi, asset listesi, Google Stitch promptları | A4 | Stil onayı |
+| 5 | Kod | GDD + şasi (Web / Unity) | 48s Web Prototip / Unity Mobil Build | A5 | Cihazda/Web'de **bizzat oynama** |
+| 6 | Pazarlanabilirlik | Prototip / gameplay videosu | CPI/CTR verisi (Web / Mobil) | A6 | ✔ **Bütçe onayı** |
 | 7 | Veri & İnfaz | Test verileri | ÖLDÜR / DÜZELT / BÜYÜT raporu | A7 | ✔ **Nihai karar** |
 | 8 | ASO & Yayın | BÜYÜT kararı | Store metni, keyword, görseller (TR+EN) | A8 | Yayın onayı |
 
@@ -55,10 +55,10 @@ Süreç detayı ve aşama geçiş koşulları: [WORKFLOW.md](WORKFLOW.md)
 *Bu bölüm yalnız Nazım onayıyla değişir.*
 
 1. **Önce üret, sonra otomatikleştir.** Otomasyon talebi geldiğinde önce hattaki gerçek darboğaz sorgulanır.
-2. **≤ 2 hafta geliştirme tavanı / prototip.** Kapsam büyüten öneri = v2 işi.
+2. **≤ 2 hafta geliştirme tavanı / Unity prototip.** Web prototipleri için geliştirme süresi tavanı **48 saattir**. Kapsam büyüten öneri = v2 işi.
 3. **Pazar-öncelikli seçim.** İnsan fikri yasak değildir; aday kartı formatına girer (`origin: insan`), aynı cetvelden geçer. Yan kapı yok.
 4. **Para harcanan / yayına giden her adım = açık insan onayı.** Onaysız adım "tamamlandı" sayılmaz.
-5. **Game feel devredilemez.** Her prototip cihazda bizzat oynanır; ajanlar juice'u ölçemez.
+5. **Game feel devredilemez.** Her prototip cihazda veya web üzerinde bizzat oynanır; ajanlar juice'u ölçemez.
 6. **Eşikler tartışılmaz** ([ops/esikler.md](ops/esikler.md)). Oyuna âşık olmak fabrikaların bir numaralı ölüm nedenidir.
 7. **Veri yoksa uydurulmaz** — "doğrulanamadı" yazılır.
 8. **Her kapının tek karar sahibi vardır.** Danışılır, oylanmaz. İnşa eden infaz etmez.
@@ -78,11 +78,12 @@ kendi CLAUDE.md/AGENTS.md'siyle açılır. Gerekçe: [ADR-0001](docs/decisions/A
 ## 6. Kalite standardı (psikoloji spesifikasyonu)
 
 Her tasarım çıktısı şu cetvele karşı denetlenir (kaynak: [docs/strategy/01-oyun-fabrikasi-analiz.md](docs/strategy/01-oyun-fabrikasi-analiz.md) §4):
-3 saniye kuralı · tek parmak / portre / sıfır okuma · değişken ödül · juice (partikül+ses+haptik) ·
-near-miss · Zeigarnik (streak, ilerleme) · 2–5 dakikalık oturum ritmi.
+3 saniye kuralı · tek parmak / portre / sıfır okuma · değişken ödül (Gacha/kutu açma, nadir obje toplama) · juice (partikül+ses+haptik) ·
+near-miss · Zeigarnik (streak, ilerleme) · 2–5 dakikalık oturum ritmi · **Hybrid-Casual Monetizasyon Tasarımı** (reklam + IAP, skins/koleksiyon, enerji, skip-level).
 
 ## 7. Model stratejisi
 
 Pahalı model → düşük hacim/yüksek değer kararları; ucuz model → yüksek hacim taramaları.
 Görsel/video üretimi LLM işi değildir. Görev→model matrisi: [docs/strategy/main_analysis.md](docs/strategy/main_analysis.md) §3.
 Model adları hızla eskir — **her harcama kararından önce güncel sürüm/fiyat doğrulanır.**
+

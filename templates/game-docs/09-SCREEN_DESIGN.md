@@ -22,7 +22,20 @@
 - Palet: <ana, vurgu, uyarı — hex> · Font: <tek font ailesi, 2 ağırlık>
 - İkon seti: <kaynak> — store görselleri M8 işidir, şimdi üretme.
 
-## 4. Asset listesi (M4 çıktısı)
+## 4. Google Stitch Arayüz Tasarımı & Prompt Şablonu
+
+Dokümanlar onaylandıktan sonra, arayüz prototipi Google Stitch kullanılarak üretilir. Stitch promptu aşağıdaki şablona göre hazırlanmalı ve çıktılar (HTML/CSS kodu veya JPG/PNG mockupları) `games/<oyun-adi>/gorsel/` klasörüne kopyalanmalıdır.
+
+- **Stitch Prototip Tipi:** [HTML/CSS Web UI (Önerilen) | JPG/PNG Mockup Referansı]
+- **Google Stitch Promptu:**
+  ```text
+  [Stitch için tasarlanmış detaylı UI/UX promptunu buraya ekle. Portre mod, buton renk paletleri, safe area mesafeleri, popup geçiş animasyonları ve responsive davranışı belirtilmelidir.]
+  ```
+- **Referans Taslak Dosyaları:**
+  - `games/<oyun-adi>/gorsel/index.html` (Web prototipiyle doğrudan uyumlu)
+  - `games/<oyun-adi>/gorsel/mockup.png` (Görsel referans)
+
+## 5. Asset listesi (M4 çıktısı)
 
 | # | Asset | Tip | Kaynak | Durum |
 |---|---|---|---|---|
@@ -33,7 +46,7 @@
 
 Tavan ~10–15 kalem; üstü kapsam alarmı.
 
-## 5. Değişiklik Geçmişi
+## 6. Değişiklik Geçmişi
 *Yalnız kodu zaten yazılmış bir bölüm değişince satır ekle (ADR-0006). Kod Etkisi
 "Var" ise `14-BACKLOG.md` → Tasarım Senkron Görevleri'ne T-xxx aç, rozeti 🔴/🟡 yap.*
 

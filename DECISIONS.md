@@ -8,7 +8,7 @@
 > Kural: Ajan karar satırını **taslak** olarak ekleyebilir; "onaylı" işaretini yalnız
 > karar sahibi insan koyar. Kayıtsız karar yok sayılır.
 
-**Son güncelleme:** 2026-07-12
+**Son güncelleme:** 2026-07-14
 
 ---
 
@@ -21,6 +21,7 @@
 | 2026-07-12 | main_analysis v1.1: 2 kişilik ekip, RACI, AOS↔Fabrika uzlaştırma (5 karar) | Strateji | Nazım | ✅ Onaylı | [main_analysis](docs/strategy/main_analysis.md) §1 |
 | 2026-07-12 | GameFactory framework yapısı kuruldu (ADR-0001…0005) | Repo | Nazım | 🕐 Taslak — onay bekliyor | ADR'ler ↓ |
 | 2026-07-12 | `game-toy-pile` reposu framework standardına hizalandı: doküman path/link düzeltmeleri, `_analiz`/`_prompt` kopyaları silindi, `AOS_ORCHESTRATOR_SPEC.md` arşive taşındı, CLAUDE/AGENTS'a Fabrika Bağlantısı eklendi | Repo hijyen | Claude (uygulama) | ✅ Uygulandı | Bu satır |
+| 2026-07-14 | Web-First Prototipleme & Hibrit-Casual Monetizasyon entegrasyonu (GAME_FACTORY.md, WORKFLOW.md, ops/esikler.md, ajan spec'leri ve templates güncellendi) | Strateji | Nazım (otomatik onay) | ✅ Uygulandı | Bu satır |
 | — | G10 pazarlanabilirlik testi bütçesi ($100–200) | M6 | Nazım | ⬜ Bekliyor (22 Tem) | [ACTIONS.md](ACTIONS.md) F-008 |
 
 ## ADR kayıtları

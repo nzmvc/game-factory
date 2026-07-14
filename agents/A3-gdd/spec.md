@@ -5,7 +5,7 @@
 ## Amaç
 Kilitli GameBrief'ten, üretime doğrudan girebilecek 2–3 sayfalık GDD çıkarmak:
 core loop, kontrol, zorluk eğrisi kuralları, seviye üretim algoritması, oturum hedefi,
-monetizasyon yerleşimleri.
+Hybrid-Casual monetizasyon ve ekonomi tasarımı (reklam + IAP, skins/koleksiyon, enerji, skip-level, Gacha/kutular).
 
 ## Makine eşlemesi
 M3 Mekanik/GDD.
@@ -25,8 +25,7 @@ M3 Mekanik/GDD.
 
 ## Yetki sınırları
 - Okur: brief, strateji, şablonlar · Yazar: games/*/gdd.md
-- Asla: kapsamı 2 hafta tavanının üstüne çıkarmak (meta katman, çoklu mekanik,
-  elle seviye tasarımı önerileri = otomatik v2 etiketi), brief'te olmayan varsayım uydurmak.
+- Asla: kapsamı tavan sınırların üstüne çıkarmak (Unity için ≤ 2 hafta, Web Prototip için ≤ 48 saat; meta katman, çoklu mekanik, elle seviye tasarımı önerileri = otomatik v2 etiketi), brief'te olmayan varsayım uydurmak.
 
 ## İnsan onay noktaları
 GDD onayı (Nazım). Onaysız GDD, M4/M5'e teslim edilmez.

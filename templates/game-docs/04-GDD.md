@@ -28,9 +28,16 @@ Parametreler: <N obje, T tür, ...> — değerler GameConfig/RemoteConfig'te, bu
 ## 7. Zeigarnik / dönüş tasarımı
 <level sayacı, streak, ilerleme göstergesi — v1 kapsamı>
 
-## 8. Monetizasyon yerleşimleri
-- Rewarded: <+1 slot, shuffle, 2x ödül...> · Interstitial: <level sonu, cap RemoteConfig'ten>
-- IAP: <v1'de stub / remove_ads...>
+## 8. Hybrid-Casual Monetizasyon ve Ekonomi Tasarımı
+- **IAP Katmanı:**
+  - Non-consumable: Remove Ads (zorunlu)
+  - Consumable/Subscription: Koleksiyon/Skins paketleri, Enerji Yenileme, "Skip Level" (Seviye Atlama) paketleri.
+- **Rewarded Reklam Yerleşimleri:**
+  - Örn: +1 slot (fail kurtarma), shuffle/booster, win'de 2x ödül, ekstra enerji.
+- **Interstitial Reklamlar:**
+  - Seviye geçişleri, RemoteConfig ile sıklık limitli (frequency capping).
+- **Değişken Ödül & Ekonomi (Variable Reward):**
+  - "Gacha" tarzı sandık açılışları veya nadir obje toplama sistemleri.
 
 ## 9. Psikoloji spesifikasyonu denetimi (zorunlu)
 | İlke | Bu oyunda nerede? |

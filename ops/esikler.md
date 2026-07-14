@@ -12,11 +12,15 @@
 
 | Metrik / Kural | Eşik |
 |---|---|
-| CPI (test) | < $0.40 hedef · < $0.30 mükemmel |
+| CPI (mobil test) | < $0.40 hedef · < $0.30 mükemmel |
+| Web Prototip CPI | < $0.40 (Unity port tetikleyicisi) |
 | Reklam CTR | > %1.5–2 |
 | D1 retention | > %45 |
 | D7 retention | > %15–20 |
 | İlk gün playtime | > 15–20 dk |
+| LTV (Lifetime Value) | > $0.50 (veya > CPI) |
+| ARPU (Avg. Revenue Per User)| > $0.45 |
+| IAP Gelir Oranı | Toplam gelirin ≥ %20–30'u |
 
 ## Kapı kuralları
 
@@ -24,7 +28,9 @@
 |---|---|
 | Yeşil ışık (M2) | Cetvel toplamı **≥ 50/70** VE hiçbir kriter 1–2 puan değil (kritik zayıflık vetosu) |
 | GameBrief kapısı (M2→M3) | Completion score **≥ 90** — altında M3 çalıştırılmaz |
-| Geliştirme tavanı (M5) | **≤ 2 hafta efor** / prototip |
+| Web Prototip tavanı (M5-Web) | **≤ 48 saat efor** |
+| Unity Geliştirme tavanı (M5-Unity)| **≤ 2 hafta efor** / prototip |
+| Unity Port Kapısı (M6-Web) | Web Prototip CPI < $0.40 veya açık insan onayı |
 | Karar mantığı (M7) | Hepsi yeşil → **BÜYÜT** · tek zayıf → **DÜZELT** (oyun başına 1 hak) · çoklu kırmızı → **ÖLDÜR** |
 
 ## Skorlama cetveli (M2 — 70 puan)
